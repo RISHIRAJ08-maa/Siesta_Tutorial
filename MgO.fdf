@@ -1,0 +1,42 @@
+SystemName          MgO tetragonal
+SystemLabel         MgO
+ 
+NumberOfAtoms       4
+NumberOfSpecies     2
+
+LatticeConstant 1 Ang 
+%block LatticeVectors
+       2.981000000        0.000000000        0.000000000
+       0.000000000        2.981000000        0.000000000
+       0.000000000        0.000000000        4.217000000
+%endblock LatticeVectors
+ 
+%block ChemicalSpeciesLabel
+  1   12  Mg
+  2    8  O 
+%endblock ChemicalSpeciesLabel
+
+PAO.BasisSize      DZ
+ 
+AtomicCoordinatesFormat Fractional
+%block AtomicCoordinatesAndAtomicSpecies
+     0.0       0.0      0.0    1
+     0.0       0.0      0.5    2
+     0.5       0.5      0.5    1
+     0.5       0.5      0.0    2
+%endblock AtomicCoordinatesAndAtomicSpecies
+%block AtomicCoordinatesOrigin
+ 0.0 0.0 0.0
+%endblock AtomicCoordinatesOrigin
+
+MeshCutoff          100 Ry
+MaxSCFIterations    250
+SCF.Mixer.Weight    0.15
+SCF.Mixer.History   3
+SCF.DM.Tolerance    1.0d-4
+
+SolutionMethod         diagon
+ElectronicTemperature  25 meV
+
+LongOutput   T
+UseTreeTimer T
